@@ -1,0 +1,100 @@
+compte rendue tp 1 linux :
+
+
+Razan ben khalifa
+
+
+2IRS 1
+
+
+
+
+1-fdisk -l
+
+
+2-22.44Gbit
+
+
+3-extended file system
+fat 32 ntfs zfs
+
+
+4- "/dev/hda1" fist primary partition
+"/dev/sda" disque dur q'on utilise
+ "/dev/sda3" le 3eme disque dur partitionné
+
+
+5 -MBR
+
+
+6-Timeout Il s'agit de fournir des limites à l'exécution des programmes.
+ Default : Bash
+
+
+6- ls
+-ls : Répertorie les fichiers et les répertoires dans le système de fichiers et affiche
+des informations détaillées sur eux.
+
+-Home : répertoires personnels des différents utilisateurs
+ Dev : Le répertoire décrivant les périphériques .
+ Boot : fichiers de configuration du démarrage (boot), noyaux et d'autres
+ fichiers indispensables au moment du démarrage (boot).
+ Etc : fichiers de configuration, scripts de démarrage, ...
+ Lib : bibliothèques (libraries) système.
+ Mnt : systèmes de fichiers montés manuellement sur votre disque dur
+ Proc : répertoire dynamique spécial qui tient à jour des informations sur
+ l'état du système, y compris les processus actifs. 
+
+
+9-chsh
+ La commande chsh modifie l'interpréteur de commandes initial (« login shell »)
+de l'utilisateur qui sera invoqué lors des connexions de l'utilisateur. 
+
+
+10-sudo groupadd gr1
+   sudo groupadd gr2
+   cat /etc/group
+
+
+11-
+gr1:1001
+gr2:1002
+
+
+
+12- sudo useradd -g gr1 user1
+
+
+
+13- sudo userdel user2
+    sudo useradd -g gr2 user2
+    sudo passwd user1
+    sudo passwd user2
+
+
+14- 
+
+
+15- sudo cat /etc/shadow
+daemon : système qui gère les services, daemon et initialise l'OS Linux.
+
+
+
+18-loger en tant que root : su-
+ CHANGEMENT : Usermod –g gr2 user1
+ VERIFICATION : id user1
+
+
+
+19-Changement de SHELL :
+ chsh –s/bin/bash user 2
+ VERIFICATION : echo $SHELL 
+
+
+ 
+
+
+
+
+
+
