@@ -1,0 +1,88 @@
+compte rendu n°:1
+travail élaboré par : Nhadi Zeinab et Sinda Wartani
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1- La commande utilisée pour afficher le partitionnement d'un disque dans un système GNU/Linux est "fdisk -l" ou "lsblk"
+
+2- /dev/sda1        16G
+
+3-EXT2FS
+Extended File System est le systeme de fichier natif de linux. .
+les autres systèmes de fichier existants sont : FAT 32 NTFS exFAT ZFS
+
+4-/dev/hda1 : FIRST PRIMARY PARTITION
+ /dev/sdc : THIRD PRIMARY PARTITION 
+
+5-la partition racine est l'équivalent de l'unité logique C: de Windows. 
+  le chargeur de demarrage Lilo se trouve dans le MBR
+  Timeout : fournir des limites à l'exécution des programmes
+  
+
+6-La commande "ls" permet d 'afficher la structure du répertoire racine  .
+Les sous-répertoires home :répertoires personnels des différents utilisateurs. 
+                      dev:Le répertoire décrivant les périphériques. 
+                      boot: contient les fichiers de démarrage,
+                      etc :fichiers de configuration 
+                      lib : contient les bibliothèques système,
+                      Mnt : systèmes de fichiers montés manuellement sur votre disque dur 
+                      Proc : répertoire dynamique spécial qui tient à jour des informations sur
+                      l'état du système, y compris les processus actifs. 
+
+
+7- on utilise la commande "echo $PATH" pour afficher le contenu de la variable d'environnement PATH.
+ La variable d'environnement PATH : contient une liste de répertoires séparés par des points-virgules.
+ 
+
+8- on utilise la commande "echo $SHELL" pour afficher le contenu de la variable d'environnement SHELL.
+ La variable d'environnement SHELL: contient le chemin du shell utilisé pour l'interprétation des commandes.
+
+
+9- Les commandes "ls", "useradd" et "chsh" sont localisées dans le répertoire /bin. 
+            ls: liste les fichiers et les répertoires dans le système de fichiers et affiche les informations qui lui sont propres,
+            useradd: créer un nouvel utilisateur 
+            chsh: changer le shell d'un utilisateur.
+
+10-groupadd gr1
+   groupadd gr2
+
+gr1:x:1001:
+gr2:x:1002:
+
+11- GID gr1 :1001
+    GID gr2 :1002
+
+12- sudo useradd –G gr1 user 1
+    sudo useradd –G gr2 user 2 
+on peut utiliser la commande "ls -ld /home/user1" et "ls -ld /home/user2" pour la vérification.
+
+
+13-passwd user1
+passwd user2
+chage -M 5 user1
+chage -M 5 user2
+
+
+14-cat /etc/passwd | grep user1
+user1:x:1001:1001::/home/user1:/bin/sh
+cat /etc/passwd | grep user2
+user2:x:1002:1002::/home/user2:/bin/sh
+X : PASSWORD FIELD
+
+15-/etc/shadow : permet d'ouvrir le fichier en mode édition et contient les informations d’authentification de l'utilisateur.
+
+16-su - user1                                
+
+17-cd /      
+cd -
+
+18-usermod -g gr2 user1
+verification:
+id user1            
+
+
+19-chsh -s /bin/bash user2
+verification:
+echo $SHELL
+
+
+
